@@ -19,8 +19,8 @@ function! s:didyoumean()
         return
     endif
 
-    if expand("%") == "[BufExplorer]"
-        " Ignore BufExplorer buffers
+    if expand("%") == "[BufExplorer]" || expand("%") == "[quickmenu]"
+        " Ignore BufExplorer buffers, ignore quickmenu buffers.
         return
     endif
 
